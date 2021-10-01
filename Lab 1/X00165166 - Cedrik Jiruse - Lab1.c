@@ -38,7 +38,7 @@ int main(void)
 	printf("Volume of a second cuboid is %f\n", secondCuboidVolume);
 
 	// TOTAL VOLUME OF ABOVE THREE SHAPES
-	printf("\nVolume of weird shape %f\n", (triangleVolume + secondCuboidVolume + secondCuboidVolume));
+	printf("\nVolume of shape %f\n", (triangleVolume + secondCuboidVolume + secondCuboidVolume));
 
 	return 0;
 }
