@@ -9,14 +9,17 @@ int main(void)
 {
 
 	// VOLUME OF A SPHERE
-	float radius, sphereVolume;
-	// get the data from user and output result
+	float sphereRadius, sphereVolume; // declare variables for this shape
+	// get the data from user and store it in sphereRadius
 	printf("Please input the radius and length of the sphere: ");
-	scanf("%f", &radius);
-	sphereVolume = (4.0f/3.0f) * pi * (radius * radius * radius);	// (4.0f/3.0f) is used instead of (4/3) because the latter gave an integer output
+	scanf("%f", &sphereRadius);
+	// calculate volume of a sphere using vaules from the user
+	sphereVolume = (4.0f/3.0f) * pi * (sphereRadius * sphereRadius * sphereRadius);	// (4.0f/3.0f) is used instead of (4/3) because the latter gave an integer output
 	printf("Volume of sphere is %f\n", sphereVolume);
 
 	// VOLUME OF A TRIANGLE
+	// used previous shape as a template
+	// changes include variable names, calculations, and messages
 	float triangleheight, trianglebase, trianglelength, triangleVolume;
 	printf("\nPlease input the height, base and length of the triangle: ");
 	scanf("%f%f%f", &triangleheight, &trianglebase, &trianglelength);
