@@ -17,6 +17,9 @@ int main(void)
 	sphereVolume = (4.0f/3.0f) * pi * (sphereRadius * sphereRadius * sphereRadius);	// (4.0f/3.0f) is used instead of (4/3) because the latter gave an integer output
 	printf("Volume of sphere is %f\n", sphereVolume);
 
+	// VOLUME OF COMPLEX SHAPE
+	// it is necesssary to divide the shape into smaller shapes to make calculations easier
+
 	// VOLUME OF A TRIANGLE
 	// used previous shape as a template
 	// changes include variable names, calculations, and messages
@@ -40,7 +43,7 @@ int main(void)
 	secondCuboidVolume = secondCuboidlength * secondCuboidwidth * secondCuboidheight;
 	printf("Volume of a second cuboid is %f\n", secondCuboidVolume);
 
-	// TOTAL VOLUME OF ABOVE THREE SHAPES
+	// TOTAL VOLUME OF COMPLEX SHAPE
 	printf("\nVolume of shape %f\n", (triangleVolume + secondCuboidVolume + secondCuboidVolume));
 
 	return 0;
