@@ -9,6 +9,7 @@ int main(void)
 {
 
 	// VOLUME OF A SPHERE
+	// variables are declared here 
 	float sphereRadius, sphereVolume; // declare variables for this shape
 	// get the data from user and store it in sphereRadius
 	printf("Please input the radius and length of the sphere: ");
@@ -38,13 +39,13 @@ int main(void)
 
 	// VOLUME OF A SECOND CUBOID
 	float secondCuboidlength, secondCuboidwidth, secondCuboidheight, secondCuboidVolume;
-	printf("\nPlease input the length, width and height of the second : ");
+	printf("\nPlease input the length, width and height of the second: ");
 	scanf("%f%f%f", &secondCuboidlength, &secondCuboidwidth, &secondCuboidheight);
 	secondCuboidVolume = secondCuboidlength * secondCuboidwidth * secondCuboidheight;
-	printf("Volume of a second cuboid is %f\n", secondCuboidVolume);
+	printf("Volume of the second cuboid is %f\n", secondCuboidVolume);
 
 	// TOTAL VOLUME OF COMPLEX SHAPE
-	printf("\nVolume of shape %f\n", (triangleVolume + secondCuboidVolume + secondCuboidVolume));
+	printf("\nVolume of shape %f\n", (triangleVolume + cuboidVolume + secondCuboidVolume));
 
 	return 0;
 }
