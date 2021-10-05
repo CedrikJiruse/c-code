@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 // program to calculate the volume of various shapes where
 // the dimensions are defined by the user
@@ -15,7 +16,7 @@ int main(void)
 	float radius, length, width, height, base;
 
 	// sphere
-	printf("Input the radius of the sphere");
+	printf("Input the radius of the sphere: ");
 	inputData(&radius);
 	printf("Volume of sphere is %f\n", sphereVolume(radius));
 
@@ -43,17 +44,33 @@ int main(void)
 	float secondCuboid = cuboidVolume(length, width, height);
 	printf("Volume of second cuboid is %f\n", secondCuboid);
 
-	printf("\nVolume of shape %f\n", triangle + cuboid + secondCuboid);
+	printf("\nVolume of final shape %f\n", triangle + cuboid + secondCuboid);
 
 	return 0;
 }
 
 void inputData(float *d) {
-	// takes data from user and stores it in a variable
-	// checks for incorrect data
+	// takes data from user and changes the value of the variable given
+	// checks for incorrect data and after 3 failed attempts the program shuts down
 	// incorrect data is anything that is less than or equal to 0
-	
-	scanf("%f", &*d);
+	int badAttempts = 0;
+
+	do {
+		// do while loops is used to allow the user 3 failed attempts at inputing data
+		scanf("%f", &*d);
+
+		if (badAttempts == 3) {
+			// ends the program after 3 bad attempts
+			printf("\nToo many failed attempts at inputing data. Program closing.\n");
+			exit(0);
+		}
+		if (*d <=0) {
+			// checks the input from user
+			printf("Incorrect data. Must be a positive number. ");
+			badAttempts = badAttempts + 1;
+		}
+
+	} while (badAttempts < 3 && badAttempts != 0);
 }
 
 float sphereVolume(float r) {
