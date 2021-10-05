@@ -4,6 +4,8 @@
 // the dimensions are defined by the user
 
 const float pi= 3.14159265359;
+
+void inputData(float *d);
 float sphereVolume(float r);
 float triangleVolume(float h, float b, float l);
 float cuboidVolume(float l, float w, float h);
@@ -13,32 +15,45 @@ int main(void)
 	float radius, length, width, height, base;
 
 	// sphere
-	printf("Input the radius of the sphere: ");
-	scanf("%f", &radius);
+	printf("Input the radius of the sphere");
+	inputData(&radius);
 	printf("Volume of sphere is %f\n", sphereVolume(radius));
 
 	// triangle
-	printf("\nInput the radius of the triangle: ");
-	scanf("%f%f%f", &height, &base, &length);
+	printf("\nInput the height, base, and length of the triangle: ");
+	inputData(&height);
+	inputData(&base);
+	inputData(&length);
 	float triangle = triangleVolume(height, base, length);
 	printf("Volume of triangle is %f\n", triangle);
 
 	// cuboid
-	printf("\nInput the radius of the cuboid: ");
-	scanf("%f%f%f", &length, &width, &height);
+	printf("\nInput the length, width, and height of the cuboid: ");
+	inputData(&length);
+	inputData(&width);
+	inputData(&height);
 	float cuboid = cuboidVolume(length, width, height);
 	printf("Volume of cuboid is %f\n", cuboid);
 
 	// second cuboid
-	printf("\nInput the radius of the second cuboid: ");
-	scanf("%f%f%f", &length, &width, &height);
+	printf("\nInput the length, width, and height of the second cuboid: ");
+	inputData(&length);
+	inputData(&width);
+	inputData(&height);
 	float secondCuboid = cuboidVolume(length, width, height);
 	printf("Volume of second cuboid is %f\n", secondCuboid);
 
-	// 
 	printf("\nVolume of shape %f\n", triangle + cuboid + secondCuboid);
 
 	return 0;
+}
+
+void inputData(float *d) {
+	// takes data from user and stores it in a variable
+	// checks for incorrect data
+	// incorrect data is anything that is less than or equal to 0
+	
+	scanf("%f", &*d);
 }
 
 float sphereVolume(float r) {
