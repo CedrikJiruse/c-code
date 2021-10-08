@@ -6,7 +6,7 @@
 
 const float pi= 3.14159265359;
 
-void inputData(float *d);
+void inputData(float *dimension);
 float sphereVolume(float r);
 float triangleVolume(float h, float b, float l);
 float cuboidVolume(float l, float w, float h);
@@ -21,25 +21,31 @@ int main(void)
 	printf("Volume of sphere is %f\n", sphereVolume(radius));
 
 	// triangle
-	printf("\nInput the height, base, and length of the triangle: ");
+	printf("\nInput the height of the triangle: ");
 	inputData(&height);
+	printf("Input the base of the triangle: ");
 	inputData(&base);
+	printf("Input the length of the triangle: ");
 	inputData(&length);
 	float triangle = triangleVolume(height, base, length);
 	printf("Volume of triangle is %f\n", triangle);
 
 	// cuboid
-	printf("\nInput the length, width, and height of the cuboid: ");
+	printf("\nInput the length of the cuboid: ");
 	inputData(&length);
+	printf("\nInput the width of the cuboid: ");
 	inputData(&width);
+	printf("\nInput the height of the cuboid: ");
 	inputData(&height);
 	float cuboid = cuboidVolume(length, width, height);
 	printf("Volume of cuboid is %f\n", cuboid);
 
 	// second cuboid
-	printf("\nInput the length, width, and height of the second cuboid: ");
+	printf("\nInput the length of the second cuboid: ");
 	inputData(&length);
+	printf("\nInput the width of the second cuboid: ");
 	inputData(&width);
+	printf("\nInput the height of the second cuboid: ");
 	inputData(&height);
 	float secondCuboid = cuboidVolume(length, width, height);
 	printf("Volume of second cuboid is %f\n", secondCuboid);
@@ -49,7 +55,7 @@ int main(void)
 	return 0;
 }
 
-void inputData(float *d) {
+void inputData(float *dimension) {
 	// takes data from user and changes the value of the variable given
 	// checks for incorrect data and after 3 failed attempts the program shuts down
 	// incorrect data is anything that is less than or equal to 0
@@ -57,9 +63,9 @@ void inputData(float *d) {
 
 	do {
 		// do while loops is used to allow the user 3 failed attempts at inputing data
-		scanf("%f", &*d);
+		scanf("%f", &*dimension);
 
-		if (*d > 0) {
+		if (*dimension > 0) {
 			// exits function once it a good value has been input
 			// this is to prevent getting stuck in the do while loop once in it
 			return;
@@ -71,7 +77,7 @@ void inputData(float *d) {
 			exit(0);
 		}
 
-		if (*d <=0) {
+		if (*dimension <=0) {
 			// checks the input from user
 			printf("Incorrect data. Must be a positive number. ");
 			badAttempts = badAttempts + 1;
