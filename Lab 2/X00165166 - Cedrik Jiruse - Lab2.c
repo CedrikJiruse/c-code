@@ -63,7 +63,6 @@ void inputData(float *dimension) {
 
 	do {
 		// do while loops is used to allow the user 3 failed attempts at inputing data
-		scanf("%f", &*dimension);
 
 		if (badAttempts == 3) {
 			// ends the program after 3 bad attempts
@@ -71,17 +70,19 @@ void inputData(float *dimension) {
 			exit(0);
 		}
 
-		if (*dimension <=0) {
+		if (*dimension <= 0) {
 			// checks the input from user
 			printf("Incorrect data. Must be a positive number. ");
 			badAttempts = badAttempts + 1;
+			printf("%f", *dimension);
 		} else {
 			// exits once it a good value has been input
 			// this is to prevent getting stuck in the do while loop once in it
 			return;
 		}
 
-	} while (badAttempts < 3 && badAttempts != 0);
+		scanf("%f", &*dimension);
+	} while (badAttempts < 3);
 }
 
 float sphereVolume(float r) {
