@@ -10,10 +10,10 @@ int main() {
     scanf("%d", &inputFib);
 
     if (inputFib == isFibonacci(inputFib)) {
-        printf("Number is Fibonacci");
+        printf("Number is Fibonacci\n");
     }
     else {
-        printf("Number is not Fibonacci");
+        printf("Number is not Fibonacci\n");
     }
     
 }
