@@ -1,7 +1,9 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 // declare functions
 int isFibonacci(int userFib);
+void inputData(int *firstFib, int *secondFib);
 
 // declare global variables
 int counter = 0;
@@ -13,28 +15,13 @@ int main() {
 
     // input number from user
     printf("Enter Number: ");
-    scanf("%d%d", &firstInputFib, &secondInputFib);
-
-    // checks if input is positive
-    while (firstInputFib < 0) {
-        printf("Number must be positive. Enter again: ");
-        scanf("%d%d", &firstInputFib, &secondInputFib);
-    }
-
-    // checks if input is equal to any number in the fibonacci sequence
-    // prints a message accordingly
-    if (firstInputFib == isFibonacci(firstInputFib)) {
-        printf("Number is Fibonacci\n\n");
-    }
-    else {
-        printf("Number is not Fibonacci\n\n");
-    }
+    inputData(&firstInputFib, &secondInputFib);
 }
 
 int isFibonacci(int userFib) {
     // runs the fibonacci sequence until it is greater than or equal to the input
 
-    int currentFib = 0, nextFib = 1, x; // used to compute the fibonacci sequence
+    int currentFib = 0, nextFib = 1, x;
 
     while (userFib > currentFib) {
 
@@ -47,4 +34,31 @@ int isFibonacci(int userFib) {
     }
 
     return currentFib;
+}
+
+void inputData(int *firstFib, int *secondFib) {
+
+	int badAttempts = 0;
+
+	do {
+
+		if (badAttempts == 3) {
+			printf("\nToo many failed attempts at inputing data. Program closing.\n");
+			exit(0);
+		}
+
+        scanf("%d%d", &*firstFib, &secondFib);
+
+        // checks if firstFib is greater than zero
+        // and if secondFib is greater than firstFib
+        // 3 attempts before the program closes
+		if (*firstFib <= 0) {
+			printf("Incorrect data. Must be a positive number. ");
+			badAttempts += 1;
+		} else if (*secondFib > *firstFib) {
+            printf("Incorrect data. Second number must be higher than the first. ");
+        } else {
+			return;
+		}
+	} while (badAttempts < 3);
 }
