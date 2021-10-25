@@ -11,7 +11,7 @@ int main() {
 	scanf("%d%d", &firstInputFib, &secondInputFib);
 
 	// check if the input is valid
-	if (firstInputFib < 0 || secondInputFib < 0) {
+	if (firstInputFib < 0 || secondInputFib <= 0) {
 		printf("Numbers must be positive.\n\n");
 		exit(0);
 	}
