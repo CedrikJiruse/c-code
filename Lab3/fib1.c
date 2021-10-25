@@ -20,7 +20,7 @@ int main() {
 	while (inputFib > currentFib) {
 
 		x = nextFib;
-		nextFib = currentFib + nextFib;
+		nextFib += currentFib;
 		currentFib = x;
 	}
 
