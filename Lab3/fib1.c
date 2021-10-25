@@ -19,10 +19,10 @@ int main() {
 
 	// runs the fibonacci sequence until it is greater than or equal to the input
 	while (inputFib > currentFib) {
+
 		x = nextFib;
 		nextFib = currentFib + nextFib;
 		currentFib = x;
-
 	}
 
 	// checks if input is equal to any number in the fibonacci sequence
