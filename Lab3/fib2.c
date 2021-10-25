@@ -16,6 +16,13 @@ int main() {
 		exit(0);
 	}
 
+	// check if first is smaller then second
+	if (firstInputFib >= secondInputFib) {
+		printf("Second number must be bigger than the first.\n\n");
+		exit(0);
+	}
+	
+
 	// runs the fibonacci sequence until it is greater than or equal to the input
 	int currentFib = 0, nextFib = 1, x;
 
