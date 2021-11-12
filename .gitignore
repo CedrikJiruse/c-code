@@ -1,6 +1,7 @@
 .vscode/tasks.json
 .vscode/launch.json
 .vscode/c_cpp_properties.json
+.vscode/settings.json
 
 examples/print-to-address
 examples/x
@@ -16,3 +17,4 @@ Lab3/fib2.exe
 Lab3/fib1.exe
 Lab3/fib2
 Lab3/fib1
+Lab4/example1.exe
