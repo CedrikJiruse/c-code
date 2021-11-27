@@ -36,6 +36,7 @@ int main() {
   printf("Time elapsed %d:%d:%d.", (timeElapsed / 3600), ((timeElapsed / 60) % 60), (timeElapsed % 60));
 }
 
+// something with this function makes so that when data is being inputed it is not stored in the variable.
 void inputData(double* metric) {
 
   // takes data from user and changes the value of the variable given
