@@ -1,23 +1,27 @@
-.vscode/tasks.json
-.vscode/launch.json
-.vscode/c_cpp_properties.json
-.vscode/settings.json
+.vscode/
 
+examples/print-to-address.exe
 examples/print-to-address
+examples/x.exe
 examples/x
+examples/hello-world.exe
 examples/hello-world
 examples/arrays.exe
 examples/arrays
+examples/functions.exe
 examples/functions
 
+Lab1/X00165166 - Cedrik Jiruse - Lab1.exe
 Lab1/X00165166 - Cedrik Jiruse - Lab1
-Lab2/X00165166 - Cedrik Jiruse - Lab2
 Lab2/X00165166 - Cedrik Jiruse - Lab2.exe
-Lab3/fib2.exe
+Lab2/X00165166 - Cedrik Jiruse - Lab2
 Lab3/fib1.exe
-Lab3/fib2
 Lab3/fib1
+Lab3/fib2.exe
+Lab3/fib2
 Lab4/Lab4.exe
 Lab4/Lab4
 Lab5/Lab5.exe
 Lab5/Lab5
+Lab6/Lab6.exe
+Lab6/Lab6
