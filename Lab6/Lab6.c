@@ -51,13 +51,13 @@ int main(void) {
 	printf("Your winrate is: %.1f%%. %.0f wins and %d losses.\n", (wins / 10) * 100, wins, losses);
 
 	return 0;
-}
+} // end of main
 
 int getCompMove() {
 
 	// generates and outputs a random move
 	return rand() % 3 + 1;
-}
+} // edn of getCompMove
 
 int getUserMove() {
 
@@ -90,4 +90,4 @@ int getUserMove() {
 			exit(0);
 		}
 	} while (badAttempts <= 3);
-}
+} // end of getUserMove
